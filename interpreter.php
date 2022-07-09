@@ -3,10 +3,12 @@
   // nombre de documentos codigos 
   $nombre_documento = "DAVID LIbro 08-07-2022.csv";
   $nombre_documento_codigos = "CODIGOS.csv";
+  $nombre_documento_salida = $nombre_documento;
   
   // ruta y unbicacion de documentos codigos
   $archivo_lectura = fopen("./CSV/".$nombre_documento, "r");
   $archivo_lectura_codigos = fopen("./CSV/".$nombre_documento_codigos, "r");
+  $archivo_escritura_salida = "./RESULT/".$nombre_documento;
 
 
   // declaro el array vacio
@@ -14,6 +16,12 @@
   $codigos = array();
   $procesado = array();
   $n = 0;
+
+  // $actual = file_get_contents($fichero);
+  // // Añade una nueva persona al fichero
+  // $actual .= "John Smith\n";
+  // // Escribe el contenido al fichero
+  // file_put_contents($fichero, $actual);
 
   // si existe el archivo
   if ($archivo_lectura) {
@@ -213,10 +221,25 @@
         
       }
       
-      // var_dump($procesado[$i]);
-      
+
+      // // ahora escribo al archivo
+      // $superlinea = $procesado[$i][0].";". $procesado[$i][1].";". $procesado[$i][2].";". $procesado[$i][3].";". $procesado[$i][4].";". $procesado[$i][5].";". $procesado[$i][6].";". $procesado[$i][7].";". $procesado[$i][8].";". $procesado[$i][9].";". $procesado[$i][10].";". $procesado[$i][11].";". $procesado[$i][12].";". $procesado[$i][13].";". $procesado[$i][14].";". $procesado[$i][15].";". $procesado[$i][16].";". $procesado[$i][17].";". $procesado[$i][18].";". $procesado[$i][19].";". $procesado[$i][20].";". $procesado[$i][21].";". $procesado[$i][22].";". $procesado[$i][23].";". $procesado[$i][24].";". $procesado[$i][25];
+
+      // // echo $superlinea;
+      // file_put_contents($archivo_escritura_salida, $superlinea, FILE_APPEND | LOCK_EX);
+
     }
     
+    // ahora escribo al archivo
+    // for ($i = 0; $i < count($procesado); $i++) {
+    //   // NAB36AD4-10422;ZAPATO NIKE AIR FORCE BLANCO CAMALEON;CALZADO;DAMA;ZAPATO;DEPORTIVO;CORTE BAJO;AIR FORCE CAMALEON;CAMALEON;36;NIKE;;;6;;;;;;1;40;0005700003577CI11;1;25998807;;AD4
+      $superlinea = $procesado[$i][0].";". $procesado[$i][1].";". $procesado[$i][2].";". $procesado[$i][3].";". $procesado[$i][4].";". $procesado[$i][5].";". $procesado[$i][6].";". $procesado[$i][7].";". $procesado[$i][8].";". $procesado[$i][9].";". $procesado[$i][10].";". $procesado[$i][11].";". $procesado[$i][12].";". $procesado[$i][13].";". $procesado[$i][14].";". $procesado[$i][15].";". $procesado[$i][16].";". $procesado[$i][17].";". $procesado[$i][18].";". $procesado[$i][19].";". $procesado[$i][20].";". $procesado[$i][21].";". $procesado[$i][22].";". $procesado[$i][23].";". $procesado[$i][24].";". $procesado[$i][25];
+
+      // echo $superlinea;
+      file_put_contents($archivo_escritura_salida, $superlinea, FILE_APPEND | LOCK_EX);
+    // }
+
+
   }
 
 
