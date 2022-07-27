@@ -1,7 +1,7 @@
 <?php
 
   // nombre de documentos codigos 
-  $nombre_documento = "40.RUN_MAX_NEW_STAR.csv";
+  $nombre_documento = "41.NEW.BOLSOS TIENDA.csv";
   $nombre_documento_codigos = "CODIGOS.csv";
   $nombre_documento_salida = $nombre_documento;
   
